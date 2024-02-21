@@ -16,9 +16,6 @@ const ElevatedCard = () => {
             <Text style={{fontSize:33}}>😊</Text>
         </View>
         <View style={styles.card}>
-            <Text style={{fontSize:33}}>😘</Text>
-        </View>
-        <View style={styles.card}>
             <Text style={{fontSize:33}}>😍</Text>
         </View>
         

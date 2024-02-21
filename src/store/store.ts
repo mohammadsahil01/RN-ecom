@@ -15,7 +15,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // @ts-ignore
 
-
 let persistConfig={
   key:"root",
   storage:AsyncStorage,

@@ -12,9 +12,8 @@ interface ProductType {
 }
 
 const initialState = {
-    value:0,
     items:[] as ProductType[],
-    cartLoaded:false
+  
   };
 
 const cartSlice = createSlice({

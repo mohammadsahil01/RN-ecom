@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
@@ -8,8 +8,8 @@ import { store } from './store/store';
 import { NavigationContainer, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 //screens
-import Home from './screens/Phones';
 import Cart from './screens/Cart';
 // @ts-ignore
 import persistStore from 'redux-persist/es/persistStore';
@@ -18,6 +18,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Home2 from './screens/Home2';
 import Details from './screens/Cosmetics';
 import Phones from './screens/Phones';
+import ProductPage from '../components/ProductPage';
 
 
 
@@ -25,9 +26,11 @@ export type RootStackParamsList={
   Phones:undefined;
   Home2:undefined,
   Cosmetics:undefined
-  Cart:undefined
+  Cart:undefined,
+  productPage:undefined
 }
-let persistor = persistStore(store)
+
+const persistor = persistStore(store)
 const Stack = createNativeStackNavigator<RootStackParamsList>()
 
 
@@ -49,6 +52,9 @@ const App = () => {
           options={{ headerShown: false }}
           />
           <Stack.Screen name='Cart' component={Cart}
+          options={{ headerShown: false }}
+          />
+          <Stack.Screen name='productPage' component={ProductPage}
           options={{ headerShown: false }}
           />
       </Stack.Navigator>

@@ -63,7 +63,7 @@ const Phones = ({ navigation }: HomeProps) => {
   if (error) {
     return (
       <View style={styles.container}>
-        <Text>{error}</Text>
+        <Text style={{color:"black"}}>{error}</Text>
       </View>
     );
   }
